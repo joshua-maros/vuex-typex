@@ -1,7 +1,7 @@
 import { Module, Plugin, Store, StoreOptions } from "vuex";
 export declare type MutationHandler<S, P> = (state: S, payload: P) => void;
 export declare type ActionHandler<S, R, G, P, T> = (context: BareActionContext<S, R, G>, payload: P) => Promise<T> | T;
-export declare type GetterHandler<S, R, G, T> = (state: S, getters: G, rootState: R) => T;
+export declare type GetterHandler<S, R, G, T> = (state: S, getters: G, rootState: R, rootGetters: any) => T;
 declare type Promisify<T> = T extends PromiseLike<any> ? T : Promise<T>;
 export interface BareActionContext<S, R, G = any> {
     state: S;

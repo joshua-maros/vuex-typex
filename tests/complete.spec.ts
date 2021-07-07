@@ -9,7 +9,6 @@ describe("Run an action", () =>
 
     beforeEach(() =>
     {
-        Vue.use(Vuex)
         store = buildStore()
         store.replaceState({
             birthday: {

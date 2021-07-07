@@ -12,7 +12,6 @@ describe("Create a store", () =>
     let storeBuilder: StoreBuilder<{}>
     beforeEach(() =>
     {
-        Vue.use(Vuex)
         storeBuilder = getStoreBuilder("nested-store")
         outerBuilder = storeBuilder.module("outer", <OuterState>{ str: "hello, world." })
         innerBuilder = outerBuilder.module("inner", <InnerState>{ int: 42 })

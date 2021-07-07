@@ -18,7 +18,6 @@ describe("Create an anon store", () =>
     {
         it("should fail", () =>
         {
-
             expect(() =>
             {
                 const readApproxDaysAlive = moduleBuilder.read((state: AnonState) => Math.round(state.age * 365.25))

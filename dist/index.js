@@ -171,7 +171,7 @@ var StoreBuilderImpl = /** @class */ (function (_super) {
         if (overrideOptions === void 0) { overrideOptions = {}; }
         if (!this._store) {
             var options = __assign(__assign({}, this.vuexModule()), overrideOptions);
-            var store_1 = new vuex.Store(options);
+            var store_1 = vuex.createStore(options);
             forEachValue(this._moduleBuilders, function (m) { return m._provideStore(store_1); });
             this._store = store_1;
         }

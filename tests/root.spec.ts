@@ -9,7 +9,6 @@ describe("Create a store", () =>
     let storeBuilder: StoreBuilder<RootState>
     beforeEach(() =>
     {
-        Vue.use(Vuex)
         storeBuilder = getStoreBuilder<RootState>("root")
         storeBuilder.reset()
     })

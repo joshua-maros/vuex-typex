@@ -1,4 +1,4 @@
-import { ActionTree, GetterTree, Module, ModuleTree, MutationTree, Plugin, Store, StoreOptions } from "vuex";
+import { ActionTree, createStore, GetterTree, Module, ModuleTree, MutationTree, Plugin, Store, StoreOptions } from "vuex";
 
 const useRootNamespace = { root: true }
 
@@ -249,7 +249,7 @@ class StoreBuilderImpl<R> extends ModuleBuilderImpl<any, R> {
                 ...this.vuexModule(),
                 ...overrideOptions
             }
-            const store = new Store<R>(options)
+            const store = createStore(options)
             forEachValue(this._moduleBuilders, m => m._provideStore(store))
             this._store = store
         }

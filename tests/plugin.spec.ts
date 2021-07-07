@@ -14,7 +14,6 @@ describe("Create a store", () =>
     let commitDecrease: () => void
     beforeEach(() =>
     {
-        Vue.use(Vuex)
         storeBuilder = getStoreBuilder("plugin-store")
         moduleBuilder = storeBuilder.module("pluggy", { age: 36 })
         commitIncrease = moduleBuilder.commit((state, payload) => { state.age++ }, "increase")
